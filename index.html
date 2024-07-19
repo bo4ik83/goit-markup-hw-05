@@ -56,7 +56,9 @@
       <section class="section-one">
         <div class="container">
           <h1 class="name">Effective Solutions for Your Business</h1>
-          <button class="button" type="button">Order Service</button>
+          <button class="button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -463,12 +465,30 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="footer-text-subscribe">Subscribe</p>
+          <form action="" class="footer-form-subscribe">
+            <label for="user-email">
+              <input
+                type="email"
+                class="footer-input-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-btn-subscribe">
+              <span class="footer-text-btn-subscribe">Subscribe</span>
+              <svg class="footer-icon-subscribe" width="24" height="24">
+                <use href="./images/frane.svg#icon-frame"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn">
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-icon-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -530,19 +550,19 @@
             ></textarea>
           </div>
           <div class="modal-checkbox">
-            <input type="checkbox" class="checkbox" />
+            <input
+              id="checkbox"
+              type="checkbox"
+              class="checkbox visually-hidden"
+            />
             <label for="checkbox" class="lable-checkbox">
-              <span class="checkbox-icon-vektor">
-                <svg class="modal-icon-vektor" width="10" height="8">
-                  <use href="./images/icons.svg#icon-vektor"></use>
+              <span class="checkbox-icon-vector">
+                <svg class="modal-icon-vector" width="10" height="8">
+                  <use href="./images/icons.svg#icon-vector"></use>
                 </svg>
               </span>
-              <p class="text-chekbox">
-                I accept the terms and conditions of the
-                <a href=""
-                  ><span class="chekbox-privacy-policy">Privacy Policy</span></a
-                >
-              </p>
+              I accept the terms and conditions of the
+              <a href="">Privacy Policy</a>
             </label>
           </div>
           <button type="submit" class="modal-submit-btn">
@@ -551,5 +571,7 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
