@@ -642,6 +642,7 @@ img {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 8px;
 }
 
 .backdrop.is-open {
@@ -663,7 +664,6 @@ img {
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
-  margin-bottom: 8px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -693,24 +693,19 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon-close:hover {
-  fill: #fff;
+.modal-icon-close:hover,
+.modal-icon-close:focus {
+  fill: #ffffff;
 }
 
 .modal-close-btn:hover {
-  fill: #ffffff;
   background: #404bbf;
   border: none;
 }
 
 .modal-close-btn:focus {
-  fill: #ffffff;
   background-color: #404bbf;
   border: none;
-}
-
-.modal-icon-close:focus {
-  fill: #ffffff;
 }
 
 .modal-text {
@@ -790,7 +785,7 @@ img {
   line-height: 117%;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .modal-comment {
@@ -824,7 +819,7 @@ img {
 .modal-checkbox {
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .checkbox-icon-vector {
