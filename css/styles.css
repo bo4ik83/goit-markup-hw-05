@@ -579,6 +579,11 @@ img {
   background-color: #2e2f42;
   padding-left: 19px;
   color: #fff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
 }
 
 .footer-input-email::placeholder {
@@ -600,6 +605,12 @@ img {
   padding: 0;
   margin: 0;
   border: none;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .footer-btn-subscribe:hover {
@@ -608,15 +619,6 @@ img {
 
 .footer-input-email:hover {
   border-color: #31d0aa;
-}
-
-.footer-text-btn-subscribe {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-  text-align: center;
-  color: #fff;
 }
 
 .footer-icon-subscribe {
@@ -660,8 +662,7 @@ img {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -669,6 +670,7 @@ img {
 }
 
 .modal-close-btn {
+  cursor: pointer;
   position: absolute;
   top: 24px;
   right: 24px;
@@ -681,10 +683,12 @@ img {
   padding: 0;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-close {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-close:hover {
@@ -693,6 +697,16 @@ img {
 
 .modal-close-btn:hover {
   background: #404bbf;
+  border: none;
+}
+
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-icon-close:focus {
+  fill: #ffffff;
 }
 
 .modal-text {
@@ -702,8 +716,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-top: 72px;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .modal-field {
@@ -713,6 +726,14 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 8px;
+}
+
+.modal-user-name,
+.modal-user-phone,
+.modal-user-mail,
+.user-name-comment {
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-input {
@@ -726,6 +747,7 @@ img {
   color: #2e2f42;
   font-size: 18px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -744,9 +766,10 @@ img {
 .modal-icon {
   fill: #2e2f42;
   position: absolute;
-  left: 19px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-line {
@@ -755,6 +778,10 @@ img {
   position: absolute;
   left: 30px;
   top: 50%;
+}
+
+.modal-field {
+  margin-bottom: 16px;
 }
 
 .comment {
@@ -773,10 +800,17 @@ img {
   height: 120px;
   background-color: transparent;
   padding: 8px 16px;
-  color: #2e2f42;
-  font-size: 18px;
+  font-size: 12px;
   outline: transparent;
   resize: none;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-comment::placeholder {
@@ -794,7 +828,6 @@ img {
 }
 
 .checkbox-icon-vector {
-  fill: #f4f4fd;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -804,6 +837,10 @@ img {
   padding: 0;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .modal-icon-vector {
@@ -816,6 +853,7 @@ img {
 .checkbox:checked + .lable-checkbox > .checkbox-icon-vector {
   fill: #f4f4fd;
   background-color: #404bbf;
+  border: none;
 }
 
 .lable-checkbox {
@@ -833,17 +871,30 @@ img {
   color: #4d5ae5;
 }
 
+.modal-privacy-policy {
+  color: #4d5ae5;
+  line-height: 133%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
 .modal-submit-btn {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
+  color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   display: block;
   border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-send {
