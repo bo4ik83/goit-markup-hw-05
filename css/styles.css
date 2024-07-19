@@ -663,6 +663,7 @@ img {
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
+  margin-bottom: 8px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -683,7 +684,8 @@ img {
   padding: 0;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-close {
@@ -696,11 +698,13 @@ img {
 }
 
 .modal-close-btn:hover {
+  fill: #ffffff;
   background: #404bbf;
   border: none;
 }
 
 .modal-close-btn:focus {
+  fill: #ffffff;
   background-color: #404bbf;
   border: none;
 }
@@ -725,13 +729,9 @@ img {
   line-height: 117%;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 8px;
 }
 
-.modal-user-name,
-.modal-user-phone,
-.modal-user-mail,
-.user-name-comment {
+.modal-user {
   display: block;
   margin-bottom: 4px;
 }
@@ -824,7 +824,7 @@ img {
 .modal-checkbox {
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .checkbox-icon-vector {
